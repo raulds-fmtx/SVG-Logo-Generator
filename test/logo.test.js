@@ -29,7 +29,7 @@ describe("Logo", () => {
   // Test to verify circle shape is rendered properly
   describe("renderShape() for shape === 'circle' ", () => {
     it("should render circle properly", () => {
-      const circle = new Shapes.circle("green", 150, 100, 160); 
+      const circle = new Shapes.circle("green", 150, 100, 160);
       const rendered = circle.render();
       const logo = new Logo("SVG", "white", "circle", "green");
       expect(logo.renderShape()).toBe(rendered);
@@ -39,7 +39,7 @@ describe("Logo", () => {
   // Test to verify triangle shape is rendered properly
   describe("renderShape() for shape === 'triangle' ", () => {
     it("should render triangle properly", () => {
-      const triangle = new Shapes.triangle("green", 150, 100, 160) 
+      const triangle = new Shapes.triangle("green", 150, 100, 160);
       const rendered = triangle.render();
       const logo = new Logo("SVG", "white", "triangle", "green");
       expect(logo.renderShape()).toStrictEqual(rendered);
@@ -49,18 +49,39 @@ describe("Logo", () => {
   // Test to verify square shape is rendered properly
   describe("renderShape() for shape === 'square' ", () => {
     it("should render square properly", () => {
-      const square = new Shapes.square("green", 150, 100, 160);
+      const square = new Shapes.square("green", 70, 20, 160);
       const rendered = square.render();
       const logo = new Logo("SVG", "white", "square", "green");
       expect(logo.renderShape()).toStrictEqual(rendered);
     });
   });
 
-  // Test to verify text is rendered properly
-  describe("renderText()", () => {
+  // Test to verify text is rendered properly for circle
+  describe("renderText() for shape === 'circle'", () => {
     it("should render text properly", () => {
-      const rendered = '<text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>';
+      const rendered =
+        '<text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>';
       const logo = new Logo("SVG", "white", "circle", "green");
+      expect(logo.renderText()).toBe(rendered);
+    });
+  });
+
+  // Test to verify text is rendered properly for square
+  describe("renderText() for shape === 'square'", () => {
+    it("should render text properly", () => {
+      const rendered =
+        '<text x="150" y="125" font-size="60" text-anchor="middle" fill="white">SVG</text>';
+      const logo = new Logo("SVG", "white", "square", "green");
+      expect(logo.renderText()).toBe(rendered);
+    });
+  });
+
+  // Test to verify text is rendered properly for triangle
+  describe("renderText() for shape === 'triangle'", () => {
+    it("should render text properly", () => {
+      const rendered =
+        '<text x="150" y="150" font-size="54" text-anchor="middle" fill="white">SVG</text>';
+      const logo = new Logo("SVG", "white", "triangle", "green");
       expect(logo.renderText()).toBe(rendered);
     });
   });

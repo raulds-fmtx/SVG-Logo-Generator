@@ -53,7 +53,7 @@ describe("Triangle", () => {
   describe("render()", () => {
     it("should render triangle properly", () => {
       const triangle = new Shapes.triangle("white", 0, 0, 10);
-      const points = ["0,5", "-5.773502691896258,-5", "5.773502691896258,-5"];
+      const points = ["0,-5", "-5.773502691896258,5", "5.773502691896258,5"];
       expect(triangle.getPoints()).toStrictEqual(points);
     });
   });
