@@ -18,7 +18,7 @@ An SVG Logo Generator that generates an SVG file containing a solid-colored logo
     
 ## Installation
     
-To generate your own logo, first enter Git Bash. Then clone the repository with the following link: [SVG Logo Generator Repository](https://github.com/raulds-fmtx/README-Inquirer-Generator.git).
+To generate your own logo, first enter Git Bash. Then clone the repository with the following link: [SVG Logo Generator Repository](https://github.com/raulds-fmtx/SVG-Logo-Generator.git).
 Next run `npm install` in order to install the required npm package dependencies in your cloned directory.
 Then run the application with the command `node index.js`.
     
@@ -28,7 +28,7 @@ When you run `node index.js`, you will be prompted by the `inquirer` package to 
 From there, the application will generate a `.svg` file based on your response to the Inquirer prompts.
 Lastly, `fs.writeFile` is used to generate your project's `logo.svg` file. Check out any of the `.svg` files in the [examples](./examples/) directory as an example.
     
-[Click Here to View a Demo.]()
+[Click Here to View a Demo.](https://drive.google.com/file/d/11eF26CfIl11gUhdYPH-_3v2Lv0E1jTS6/view?usp=sharing)
 
 ## Tests
 
